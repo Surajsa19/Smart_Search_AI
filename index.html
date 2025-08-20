@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Search AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Smart Search</h1>
+        <div class="relative" role="combobox" aria-expanded="false" aria-haspopup="listbox" id="search-combobox">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300" 
+                placeholder="Search for a programming language..."
+                autocomplete="off"
+                role="textbox"
+                aria-autocomplete="list"
+                aria-controls="suggestions-list">
+            
+            <ul 
+                id="suggestions" 
+                class="suggestions-list absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto hidden"
+                role="listbox">
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
